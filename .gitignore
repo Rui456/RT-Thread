@@ -12,7 +12,4 @@ CTestTestfile.cmake
 JLinkLog.txt
 /rtt-prj/bsp/stm32f40x/build/
 *.crf
-<<<<<<< HEAD
-=======
 *.o
->>>>>>> b772d38170fad831be1e00776699df66a7d773e3
