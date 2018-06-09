@@ -73,36 +73,36 @@ int rt_application_init()
     if (tid != RT_NULL)
         rt_thread_startup(tid);
 
-//		tid2 = rt_thread_create(
-//														"led demo",
-//														led_flow,RT_NULL,
-//														LED_STACK_SIZE,LED_PRIORITY,LED_TIME_SLICE
-//														);
-//		if(tid2 != RT_NULL)
-//				rt_thread_startup(tid2);
+//	tid2 = rt_thread_create(
+//							"led demo",
+//							led_flow,RT_NULL,
+//							LED_STACK_SIZE,LED_PRIORITY,LED_TIME_SLICE
+//							);
+//	if(tid2 != RT_NULL)
+//			rt_thread_startup(tid2);
 	
 		tid3 = rt_thread_create("led init",
-														led_init,RT_NULL,
-														1000,10,10);
+								led_init,RT_NULL,
+								1000,10,10);
 	
     if (tid3 != RT_NULL)
         rt_thread_startup(tid3);
 
 		tid3 = rt_thread_create("led red",
-														led_on,(void*)53,
-														1000,20,10);
+								led_on,(void*)53,
+								1000,20,10);
 	
     if (tid3 != RT_NULL)
         rt_thread_startup(tid3);
 		tid4 = rt_thread_create("led Green",
-														led_on,(void*)54,
-														1000,20,10);
+								led_on,(void*)54,
+								1000,20,10);
     if (tid4 != RT_NULL)
         rt_thread_startup(tid4);
 	
 		tid5 = rt_thread_create("led Blue",
-														led_on,(void*)55,
-														1000,20,10);
+								led_on,(void*)55,
+								1000,20,10);
     if (tid5 != RT_NULL)
         rt_thread_startup(tid5);
 	
