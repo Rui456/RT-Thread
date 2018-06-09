@@ -61,17 +61,25 @@ void rt_init_thread_entry(void* parameter)
 	finsh_system_init();
 #endif
 }
-
+#include "led.h"
 int rt_application_init()
 {
-    rt_thread_t tid;
+    rt_thread_t tid,tid2;
 
     tid = rt_thread_create("init",
         rt_init_thread_entry, RT_NULL,
         2048, RT_THREAD_PRIORITY_MAX/3, 20);
 
+		tid2 = rt_thread_create(
+														"led demo",
+														LED_Demo,RT_NULL,
+														LED_STACK_SIZE,LED_PRIORITY,LED_TIME_SLICE
+														);
+	
     if (tid != RT_NULL)
         rt_thread_startup(tid);
+		if(tid2 != RT_NULL)
+				rt_thread_startup(tid2);
 
     return 0;
 }

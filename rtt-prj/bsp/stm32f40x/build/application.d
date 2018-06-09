@@ -60,3 +60,20 @@
 .\build\application.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
 .\build\application.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\build\application.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\build\application.o: applications\led.h
+.\build\application.o: ..\..\components\drivers\include\drivers/pin.h
+.\build\application.o: ..\..\components\drivers\include\rtdevice.h
+.\build\application.o: ..\..\components\drivers\include\ipc/ringbuffer.h
+.\build\application.o: ..\..\components\drivers\include\ipc/completion.h
+.\build\application.o: ..\..\components\drivers\include\ipc/dataqueue.h
+.\build\application.o: ..\..\components\drivers\include\ipc/workqueue.h
+.\build\application.o: ..\..\components\drivers\include\ipc/waitqueue.h
+.\build\application.o: ..\..\components\drivers\include\ipc/pipe.h
+.\build\application.o: ..\..\components\drivers\include\rtdevice.h
+.\build\application.o: ..\..\components\drivers\include\ipc/poll.h
+.\build\application.o: ..\..\components\drivers\include\drivers/serial.h
+.\build\application.o: ..\..\components\drivers\include\drivers/i2c.h
+.\build\application.o: ..\..\components\drivers\include\drivers/i2c_dev.h
+.\build\application.o: ..\..\components\drivers\include\drivers/pin.h
+.\build\application.o: ..\..\components\drivers\include\drivers/can.h
+.\build\application.o: ..\..\components\drivers\include\drivers/hwtimer.h

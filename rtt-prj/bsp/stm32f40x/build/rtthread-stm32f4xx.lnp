@@ -1,6 +1,7 @@
 --cpu=Cortex-M4.fp
 ".\build\application.o"
 ".\build\startup.o"
+".\build\led.o"
 ".\build\board.o"
 ".\build\stm32f4xx_it.o"
 ".\build\usart.o"
