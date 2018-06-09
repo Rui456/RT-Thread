@@ -11,7 +11,9 @@
 #define LED_STACK_SIZE	1000
 #define LED_TIME_SLICE	11
 
-void LED_Demo(void* param);
+void led_flow(void* param);
+void led_init(void* param);
+void led_on(void* led);
 
 
 

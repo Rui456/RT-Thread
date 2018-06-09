@@ -1,0 +1,9 @@
+#JLinkLog.txt	nostatus
+*.crf			nostatus
+*.o				nostatus
+
+
+JLinkLog.txt	diff=nodiff
+*.crf 			diff=nodiff
+*.o				diff=nodiff
+

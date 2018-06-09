@@ -64,22 +64,49 @@ void rt_init_thread_entry(void* parameter)
 #include "led.h"
 int rt_application_init()
 {
-    rt_thread_t tid,tid2;
+    rt_thread_t tid,tid2,tid3,tid4,tid5;
+	
 
     tid = rt_thread_create("init",
         rt_init_thread_entry, RT_NULL,
         2048, RT_THREAD_PRIORITY_MAX/3, 20);
-
-		tid2 = rt_thread_create(
-														"led demo",
-														LED_Demo,RT_NULL,
-														LED_STACK_SIZE,LED_PRIORITY,LED_TIME_SLICE
-														);
-	
     if (tid != RT_NULL)
         rt_thread_startup(tid);
-		if(tid2 != RT_NULL)
-				rt_thread_startup(tid2);
+
+//		tid2 = rt_thread_create(
+//														"led demo",
+//														led_flow,RT_NULL,
+//														LED_STACK_SIZE,LED_PRIORITY,LED_TIME_SLICE
+//														);
+//		if(tid2 != RT_NULL)
+//				rt_thread_startup(tid2);
+	
+		tid3 = rt_thread_create("led init",
+														led_init,RT_NULL,
+														1000,10,10);
+	
+    if (tid3 != RT_NULL)
+        rt_thread_startup(tid3);
+
+		tid3 = rt_thread_create("led red",
+														led_on,(void*)53,
+														1000,20,10);
+	
+    if (tid3 != RT_NULL)
+        rt_thread_startup(tid3);
+		tid4 = rt_thread_create("led Green",
+														led_on,(void*)54,
+														1000,20,10);
+    if (tid4 != RT_NULL)
+        rt_thread_startup(tid4);
+	
+		tid5 = rt_thread_create("led Blue",
+														led_on,(void*)55,
+														1000,20,10);
+    if (tid5 != RT_NULL)
+        rt_thread_startup(tid5);
+	
+	
 
     return 0;
 }
