@@ -9,4 +9,6 @@ compile_commands.json
 CTestTestfile.cmake
 
 #for keil
-/rtt-prj/bsp/stm32f40x/JLinkLog.txt
+JLinkLog.txt
+/rtt-prj/bsp/stm32f40x/build/
+*.crf
