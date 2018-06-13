@@ -15,12 +15,12 @@
 #include <board.h>
 #include "led.h"
 
+	rt_uint8_t led_no[3];
 
 int main(void)
 {
   /* user app entry */
     rt_thread_t tid,tid2,tid3,tid4,tid5;
-	rt_uint8_t led_no[3];
 	
 //	tid1 = rt_thread_create(
 //							"led demo",
